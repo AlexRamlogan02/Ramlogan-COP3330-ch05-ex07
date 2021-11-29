@@ -27,10 +27,10 @@ int main(void)
 
     disc = isValid(a, b, c);
 
-    if (disc < 0) //base case
+    if (disc <= 0) //base case
     {
-        cout << "This will not return a valid answer\n";
-        exit(0); //exit from program
+        cout << "will not return a real number\n";
+        exit(0);
     }
     else
     {
@@ -44,7 +44,7 @@ int main(void)
     //cout << a << " " << b << " " << c << "\n";
 
     //output answer
-    cout << neg << "," << "pos";
+    cout << neg << "," << pos << "\n";
 
     return 0;
 }
