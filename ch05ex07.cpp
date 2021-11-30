@@ -12,7 +12,7 @@
 
 using namespace std;
 
-//prototype
+//declarations
 double isValid(double a, double b, double c);
 double sqrt(double root);
 
@@ -23,7 +23,10 @@ int main(void)
     double disc;
     double neg, pos; //neg is when we substract from the discriminant, pos is when we add the discriminant
 
-    cin >> a >> b >> c; //take in the input for a b and c
+    cin >> a >> b >> c;
+
+    //test if the input was taken
+    //cout << a << " " << b << " " << c << "\n";
 
     disc = isValid(a, b, c);
 
@@ -35,13 +38,10 @@ int main(void)
     else
     {
         disc = sqrt(disc); //take the root of disc
-        disc = disc / 2;         //divide by 2
+        disc = disc / 2;   //divide by 2
         neg = b - disc;
         pos = b + disc;
     }
-
-    //test if the input was taken
-    //cout << a << " " << b << " " << c << "\n";
 
     //output answer
     cout << neg << "," << pos << "\n";
